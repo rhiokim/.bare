@@ -9,6 +9,7 @@
   "scripts": {
     "lint": "eslint --format=node_modules/eslint-formatter-pretty 'src/**/*.@(js|jsx)'",
     "flow": "flow",
+    "flow:coverage": "flow-coverage-report",
     "lint:msg": "validate-commit-msg",
     "format": "prettier-eslint --write 'src/**/*.@(js|jsx)'",
     "test": "mocha",
@@ -46,6 +47,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "flow-bin": "^0.44.2",
+    "flow-coverage-report": "^0.3.0",
     "husky": "^0.13.3",
     "istanbul": "^0.4.5",
     "mocha": "^3.3.0",
@@ -54,5 +56,14 @@
     "sinon": "^2.1.0",
     "sinon-chai": "^2.9.0",
     "validate-commit-msg": "^2.12.1"
+  },
+  "flow-coverage-report": {
+    "includeGlob": [
+      "src/**/*.js",
+      "src/**/*.jsx"
+    ],
+    "type": [
+      "text"
+    ]
   }
 }
